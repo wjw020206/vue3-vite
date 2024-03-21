@@ -1,5 +1,5 @@
 import { ProxyOptions } from 'vite';
-import { createServiceConfig } from '../../src/utils/service';
+import { createServiceConfig } from '../../src/utils/proxy-service';
 
 /**
  * 创建Vite代理

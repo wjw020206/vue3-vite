@@ -23,7 +23,7 @@ declare namespace App {
 
     /** 简单服务配置 */
     interface SimpleServiceConfig extends Pick<ServiceConfigItem, 'baseURL'> {
-      other: Recode<OtherBaseURLKey, string>;
+      other: Record<OtherBaseURLKey, string>;
     }
   }
 }
