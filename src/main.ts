@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { setupRouter } from './router';
 import App from './App.vue';
+import './plugins/assets';
 
 async function setupApp() {
   // 创建Vue实例
