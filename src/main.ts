@@ -1,5 +1,16 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { setupRouter } from './router';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+async function setupApp() {
+  // 创建Vue实例
+  const app = createApp(App);
+
+  // 注册路由模块
+  await setupRouter(app);
+
+  // 挂载
+  app.mount('#app');
+}
+
+setupApp();

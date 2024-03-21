@@ -4,6 +4,9 @@
  * 用于声明 import.meta 对象类型
  */
 declare namespace Env {
+  /** 路由模式类型 */
+  type RouterHistoryMode = 'hash' | 'history' | 'memory';
+
   /** importMeta 接口 */
   interface ImportMeta extends ImportMetaEnv {
     /** 应用基础公共路径 */
@@ -16,5 +19,7 @@ declare namespace Env {
     readonly VITE_SERVICE_BASE_URL: string;
     /** 其它后台服务基本地址 */
     readonly VITE_OTHER_SERVICE_BASE_URL: string;
+    /** 路由历史记录模式 */
+    readonly VITE_ROUTER_HISTORY_MODE?: RouterHistoryMode;
   }
 }
