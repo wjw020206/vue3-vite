@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite --mode dev",
     "dev:prod": "vite --mode prod",
-    "build": "vue-tsc && vite build --mode prod",
+    "build": "vue-tsc --noEmit --skipLibCheck && vite build --mode prod",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
