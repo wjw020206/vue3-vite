@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Parens", "typecheck", "unocss", "unplugin"]
+  "cSpell.words": ["Parens", "typecheck", "unocss", "unplugin"],
+  "css.customData": [".vscode/unocss.json"]
 }
