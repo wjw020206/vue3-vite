@@ -6,6 +6,6 @@ export const constantRoutes: RouteRecordRaw[] = [
     path: '/',
     name: 'root',
     component: () => import('@/layouts/basic-layout/index.vue'),
-    children: [],
-  },
+    children: []
+  }
 ];

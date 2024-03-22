@@ -5,7 +5,7 @@ export default function unplugin() {
     AutoImport({
       imports: ['vue', 'vue-router'],
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
-      dts: 'src/typings/auto-imports.d.ts',
-    }),
+      dts: 'src/typings/auto-imports.d.ts'
+    })
   ];
 }

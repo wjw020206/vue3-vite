@@ -7,5 +7,5 @@ const { baseURL, proxyPattern } = createServiceConfig(import.meta.env);
 const isHttpProxy = import.meta.env.VITE_HTTP_PROXY === 'Y';
 
 export const request = createRequest({
-  baseURL: isHttpProxy ? proxyPattern : baseURL,
+  baseURL: isHttpProxy ? proxyPattern : baseURL
 });

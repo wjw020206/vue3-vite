@@ -14,15 +14,10 @@ interface RequestParam {
  * @param axiosConfig - axios配置
  * @param backendConfig - 后端接口字段配置
  */
-export function createRequest(
-  axiosConfig: AxiosRequestConfig,
-  backendConfig?: Service.BackendResultConfig
-) {
+export function createRequest(axiosConfig: AxiosRequestConfig, backendConfig?: Service.BackendResultConfig) {
   const customInstance = new CustomAxiosInstance(axiosConfig, backendConfig);
 
-  async function asyncRequest<T>(
-    param: RequestParam
-  ): Promise<Service.RequestResult<T>> {
+  async function asyncRequest<T>(param: RequestParam): Promise<Service.RequestResult<T>> {
     const { url } = param;
     const method = param.method || 'get';
     const { instance } = customInstance;
@@ -32,7 +27,7 @@ export function createRequest(
       method,
       url,
       data: param.data,
-      config: param.axiosConfig,
+      config: param.axiosConfig
     })) as Service.RequestResult<T>;
 
     return res;
@@ -78,17 +73,11 @@ export function createRequest(
     get,
     post,
     put,
-    delete: handleDelete,
+    delete: handleDelete
   };
 }
 
-async function getRequestResponse(params: {
-  instance: AxiosInstance;
-  method: RequestMethod;
-  url: string;
-  data?: any;
-  config?: AxiosRequestConfig;
-}) {
+async function getRequestResponse(params: { instance: AxiosInstance; method: RequestMethod; url: string; data?: any; config?: AxiosRequestConfig }) {
   const { instance, method, url, data, config } = params;
 
   let res: any;

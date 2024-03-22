@@ -20,7 +20,7 @@ export default class CustomAxiosInstance {
       codeKey: 'code',
       dataKey: 'data',
       msgKey: 'message',
-      successKey: 200,
+      successKey: 200
     }
   ) {
     this.backendConfig = backendConfig;
@@ -34,7 +34,7 @@ export default class CustomAxiosInstance {
   setInterceptor() {
     /** 设置请求拦截器 */
     this.instance.interceptors.request.use(
-      (config) => {
+      config => {
         const handleConfig = { ...config };
         return handleConfig;
       },
@@ -44,7 +44,7 @@ export default class CustomAxiosInstance {
     );
     /** 设置响应拦截器 */
     this.instance.interceptors.response.use(
-      (response) => {
+      response => {
         return response.data;
       },
       (axiosError: AxiosError) => {

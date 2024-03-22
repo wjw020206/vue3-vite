@@ -15,7 +15,7 @@ export function createViteProxy(env: Env.ImportMeta, isDev: boolean) {
 
   const proxy = createProxyItem({ baseURL, proxyPattern });
 
-  other.forEach((item) => {
+  other.forEach(item => {
     Object.assign(proxy, createProxyItem(item));
   });
 
@@ -28,7 +28,7 @@ function createProxyItem(item: App.Service.ServiceConfigItem) {
   proxy[item.proxyPattern] = {
     target: item.baseURL,
     changeOrigin: true,
-    rewrite: (path) => path.replace(new RegExp(`^${item.proxyPattern}`), ''),
+    rewrite: path => path.replace(new RegExp(`^${item.proxyPattern}`), '')
   };
 
   return proxy;
