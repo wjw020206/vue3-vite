@@ -14,6 +14,12 @@
     "antfu.unocss",
     "sdras.vue-vscode-snippets",
     "christian-kohler.path-intellisense",
-    "naumovs.color-highlight"
+    "naumovs.color-highlight",
+    "mikestead.dotenv",
+    "antfu.goto-alias",
+    "editorconfig.editorconfig",
+    "antfu.iconify",
+    "Vue.volar",
+    "eamodio.gitlens"
   ]
 }
