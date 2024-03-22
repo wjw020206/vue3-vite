@@ -34,6 +34,9 @@ devDependencies:
   '@unocss/eslint-config':
     specifier: ^0.58.6
     version: 0.58.6(eslint@8.57.0)(typescript@5.4.2)
+  '@unocss/transformer-directives':
+    specifier: ^0.58.6
+    version: 0.58.6
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.1.6)(vue@3.4.21)
