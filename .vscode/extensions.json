@@ -1,3 +1,19 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "formulahendry.auto-complete-tag",
+    "streetsidesoftware.code-spell-checker",
+    "pranaygp.vscode-css-peek",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "redjue.git-commit-plugin",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "meganrogge.template-string-converter",
+    "ipatalas.vscode-postfix-ts",
+    "antfu.unocss",
+    "sdras.vue-vscode-snippets",
+    "christian-kohler.path-intellisense",
+    "naumovs.color-highlight"
+  ]
 }
