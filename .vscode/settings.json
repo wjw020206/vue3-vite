@@ -1,4 +1,16 @@
 {
   "cSpell.words": ["Parens", "typecheck", "unocss", "unplugin"],
-  "css.customData": [".vscode/unocss.json"]
+  "css.customData": [".vscode/unocss.json"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "GitCommitPlugin.ShowEmoji": false,
+  "git.autofetch": true,
+  "git-graph.repository.fetchAndPrune": true,
+  "git-graph.dialog.fetchRemote.prune": true,
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  }
 }
