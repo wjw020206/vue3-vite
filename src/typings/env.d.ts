@@ -21,5 +21,9 @@ declare namespace Env {
     readonly VITE_OTHER_SERVICE_BASE_URL: string;
     /** 路由历史记录模式 */
     readonly VITE_ROUTER_HISTORY_MODE?: RouterHistoryMode;
+    /** 图标前缀开头 */
+    readonly VITE_ICON_PREFIX: 'icon';
+    /** 本地图片前缀开头 */
+    readonly VITE_ICON_LOCAL_PREFIX: 'local-icon';
   }
 }

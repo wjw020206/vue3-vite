@@ -25,6 +25,6 @@ export default defineConfig(configEnv => {
         cachedChecks: false
       }
     },
-    plugins: setupVitePlugins()
+    plugins: setupVitePlugins(viteEnv)
   };
 });
