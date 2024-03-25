@@ -17,7 +17,10 @@ export default function unplugin(viteEnv: Env.ImportMeta) {
     AutoImport({
       imports: ['vue', 'vue-router'],
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
-      dts: 'src/typings/auto-imports.d.ts'
+      dts: 'src/typings/auto-imports.d.ts',
+      eslintrc: {
+        enabled: true
+      }
     }),
     Components({
       dts: 'src/typings/components.d.ts',
