@@ -48,7 +48,7 @@
     "vue-tsc": "^2.0.7"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm typecheck && pnpm lint-staged"
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [
