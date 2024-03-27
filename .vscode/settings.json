@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["iconify", "Parens", "typecheck", "unocss", "unplugin", "vite", "vitejs"],
+  "cSpell.words": ["iconify", "Parens", "typecheck", "unocss", "unplugin", "vite", "vitejs", "axios"],
   "css.customData": [".vscode/unocss.json"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
