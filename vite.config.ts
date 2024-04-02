@@ -9,6 +9,7 @@ export default defineConfig(configEnv => {
 
   return {
     base: viteEnv.VITE_BASE_URL,
+    plugins: setupVitePlugins(viteEnv),
     resolve: {
       alias: {
         '~': fileURLToPath(new URL('/', import.meta.url)),
@@ -25,6 +26,15 @@ export default defineConfig(configEnv => {
         cachedChecks: false
       }
     },
-    plugins: setupVitePlugins(viteEnv)
+    preview: {
+      port: 9527
+    },
+    build: {
+      reportCompressedSize: false,
+      sourcemap: viteEnv.VITE_SOURCE_MAP === 'Y',
+      commonjsOptions: {
+        ignoreTryCatch: false
+      }
+    }
   };
 });

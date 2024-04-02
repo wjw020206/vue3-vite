@@ -25,5 +25,7 @@ declare namespace Env {
     readonly VITE_ICON_PREFIX: 'icon';
     /** 本地图片前缀开头 */
     readonly VITE_ICON_LOCAL_PREFIX: 'local-icon';
+    /** 构建是否生成sourceMap */
+    readonly VITE_SOURCE_MAP?: CommonType.YesOrNo;
   }
 }
