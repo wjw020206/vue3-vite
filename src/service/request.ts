@@ -38,8 +38,8 @@ export function createRequest(axiosConfig: AxiosRequestConfig, backendConfig?: S
    * @param url - 请求地址
    * @param config - axios配置
    */
-  function get<T>(url: string, config?: AxiosRequestConfig) {
-    return asyncRequest<T>({ url, method: 'get', axiosConfig: config });
+  function get<T>(url: string, data?: any, config?: AxiosRequestConfig) {
+    return asyncRequest<T>({ url, method: 'get', data, axiosConfig: config });
   }
   /**
    * post请求
@@ -65,8 +65,8 @@ export function createRequest(axiosConfig: AxiosRequestConfig, backendConfig?: S
    * @param url - 请求地址
    * @param config - axios配置
    */
-  function handleDelete<T>(url: string, config?: AxiosRequestConfig) {
-    return asyncRequest<T>({ url, method: 'delete', axiosConfig: config });
+  function handleDelete<T>(url: string, data?: any, config?: AxiosRequestConfig) {
+    return asyncRequest<T>({ url, method: 'delete', data, axiosConfig: config });
   }
 
   return {
@@ -77,14 +77,14 @@ export function createRequest(axiosConfig: AxiosRequestConfig, backendConfig?: S
   };
 }
 
-async function getRequestResponse(params: { instance: AxiosInstance; method: RequestMethod; url: string; data?: any; config?: AxiosRequestConfig }) {
+async function getRequestResponse(params: {
+  instance: AxiosInstance;
+  method: RequestMethod;
+  url: string;
+  data?: any;
+  config?: AxiosRequestConfig;
+}): Promise<any> {
   const { instance, method, url, data, config } = params;
-
-  let res: any;
-  if (method === 'get' || method === 'delete') {
-    res = await instance[method](url, config);
-  } else {
-    res = await instance[method](url, data, config);
-  }
+  const res = await instance[method](url, data, config);
   return res;
 }

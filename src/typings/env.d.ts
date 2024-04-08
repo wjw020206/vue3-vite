@@ -27,5 +27,7 @@ declare namespace Env {
     readonly VITE_ICON_LOCAL_PREFIX: 'local-icon';
     /** 构建是否生成sourceMap */
     readonly VITE_SOURCE_MAP?: CommonType.YesOrNo;
+    /** 代理前缀 */
+    readonly VITE_APP_BASE_API: string;
   }
 }

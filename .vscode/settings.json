@@ -12,5 +12,8 @@
   "git-graph.dialog.fetchRemote.prune": true,
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src"
+  },
+  "search.exclude": {
+    "**/dist": true
   }
 }
